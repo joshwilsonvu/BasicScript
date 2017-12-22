@@ -1,0 +1,7 @@
+# Qt generated files #
+######################
+*.pro.user
+
+# 3rd party files #
+###################
+App/Resources/rc
