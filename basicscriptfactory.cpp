@@ -2,7 +2,7 @@
 #include "basicscript.h"
 #include <iostream>
 
-BasicScriptFactory::~BasicScriptFactory() noexcept
+BasicScriptFactory::~BasicScriptFactory()
 {
 
 }
@@ -14,7 +14,12 @@ AudioScript* BasicScriptFactory::spawn()
 
 const char* BasicScriptFactory::name()
 {
-    return "BS";
+    return "BasicScript";
+}
+
+const char* BasicScriptFactory::scriptInfo()
+{
+    return "A testing plugin for use during AudioScript development.";
 }
 
 void BasicScriptFactory::setupGUI(AudioScriptUI &gui)

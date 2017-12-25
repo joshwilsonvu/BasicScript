@@ -12,13 +12,13 @@ class BasicScriptFactory : public QObject, public AudioScriptFactory
     Q_INTERFACES(AudioScriptFactory)
 
 public:
-    ~BasicScriptFactory() noexcept override;
+    ~BasicScriptFactory() override;
 
     AudioScript* spawn() override;
 
     const char* name() override;
 
-    //const char* scriptInfo() override;
+    const char* scriptInfo() override;
 
     void setupGUI(AudioScriptUI& gui) override;
 };
