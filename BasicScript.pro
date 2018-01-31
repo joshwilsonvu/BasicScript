@@ -5,19 +5,19 @@
 #
 #-------------------------------------------------
 
+include(../AudioScript/common.pri)
+
 TARGET = BasicScript
 
 TEMPLATE = lib
 
 CONFIG += plugin c++11
 
-DESTDIR = /Users/Josh/QProjects/Builds
-
-#QT       += widgets
+DESTDIR = $$AS_PLUGIN_PATH
 
 INCLUDEPATH += ../AudioScript/ASUtils
 
-LIBS += -L/Users/Josh/QProjects/Builds/ -lASUtils
+LIBS += -L$${AS_LIB_PATH} -l$${AS_LIB_NAME}
 
 HEADERS += \
         basicscript.h \

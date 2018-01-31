@@ -21,8 +21,3 @@ const char* BasicScriptFactory::scriptInfo()
 {
     return "A testing plugin for use during AudioScript development.";
 }
-
-void BasicScriptFactory::setupGUI(AudioScriptUI &gui)
-{
-    Q_UNUSED(gui)
-}

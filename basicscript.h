@@ -1,7 +1,7 @@
 #ifndef BASICSCRIPT_H
 #define BASICSCRIPT_H
 
-#include "audioscript.h"
+#include <AudioScript>
 
 class BasicScript : public AudioScript
 {
@@ -9,7 +9,7 @@ public:
 
     ~BasicScript() override;
 
-    sample_t process(sample_t sample) override;
+    AudioScriptBuffer process(AudioScriptBuffer buffer) override;
 
     void reset() override;
 };

@@ -5,9 +5,11 @@ BasicScript::~BasicScript()
 
 }
 
-sample_t BasicScript::process(sample_t sample)
+AudioScriptBuffer BasicScript::process(AudioScriptBuffer buffer)
 {
-    return sample * 0.5f;
+    return buffer.apply([] (sample_t x) {
+        return x * 0.5;
+    });
 }
 
 void BasicScript::reset()

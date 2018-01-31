@@ -1,8 +1,7 @@
 #ifndef BASICSCRIPTFACTORY_H
 #define BASICSCRIPTFACTORY_H
 
-#include "audioscriptfactory.h"
-#include "audioscriptui.h"
+#include <AudioScript>
 
 class BasicScriptFactory : public QObject, public AudioScriptFactory
 {
@@ -19,8 +18,6 @@ public:
     const char* name() override;
 
     const char* scriptInfo() override;
-
-    void setupGUI(AudioScriptUI& gui) override;
 };
 
 #endif // BASICSCRIPTFACTORY_H
