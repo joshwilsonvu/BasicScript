@@ -3,21 +3,18 @@
 
 #include <AudioScript>
 
-class BasicScriptFactory : public QObject, public AudioScriptFactory
+class BasicScriptFactory : public QObject, public AS::Factory
 {
-    //AUDIOSCRIPTFACTORY // macro required in private section of implementation
-    Q_OBJECT \
-    Q_PLUGIN_METADATA(IID AUDIOSCRIPTFACTORY_IID) \
-    Q_INTERFACES(AudioScriptFactory)
+    AS_FACTORY // macro required in private section of implementation
 
 public:
     ~BasicScriptFactory() override;
 
-    AudioScript* spawn() override;
+    AS::Script* spawn() override;
 
     const char* name() override;
 
-    const char* scriptInfo() override;
+    const char* info() override;
 };
 
 #endif // BASICSCRIPTFACTORY_H

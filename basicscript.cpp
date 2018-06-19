@@ -5,14 +5,14 @@ BasicScript::~BasicScript()
 
 }
 
-AudioScriptBuffer BasicScript::process(AudioScriptBuffer buffer)
+AS::Buffer BasicScript::process(AS::Buffer buffer)
 {
-    return buffer.apply([] (sample_t x) {
+    return buffer.apply([] (AS::sample_t x) {
         return x * 0.5;
     });
 }
 
-void BasicScript::reset()
+void BasicScript::init()
 {
 
 }

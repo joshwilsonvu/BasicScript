@@ -7,7 +7,7 @@ BasicScriptFactory::~BasicScriptFactory()
 
 }
 
-AudioScript* BasicScriptFactory::spawn()
+AS::Script* BasicScriptFactory::spawn()
 {
     return new BasicScript();
 }
@@ -17,7 +17,7 @@ const char* BasicScriptFactory::name()
     return "BasicScript";
 }
 
-const char* BasicScriptFactory::scriptInfo()
+const char* BasicScriptFactory::info()
 {
     return "A testing plugin for use during AudioScript development.";
 }

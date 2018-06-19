@@ -3,15 +3,15 @@
 
 #include <AudioScript>
 
-class BasicScript : public AudioScript
+class BasicScript : public AS::Script
 {
 public:
 
     ~BasicScript() override;
 
-    AudioScriptBuffer process(AudioScriptBuffer buffer) override;
+    AS::Buffer process(AS::Buffer buffer) override;
 
-    void reset() override;
+    void init() override;
 };
 
 #endif // BASICSCRIPT_H

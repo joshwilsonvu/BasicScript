@@ -5,19 +5,15 @@
 #
 #-------------------------------------------------
 
-include(../AudioScript/common.pri)
-
 TARGET = BasicScript
 
 TEMPLATE = lib
 
 CONFIG += plugin c++11
 
-DESTDIR = $$AS_PLUGIN_PATH
-
 INCLUDEPATH += ../AudioScript/ASUtils
 
-LIBS += -L$${AS_LIB_PATH} -l$${AS_LIB_NAME}
+LIBS += -L../AudioScript/ASUtils -lASUtils
 
 HEADERS += \
         basicscript.h \
