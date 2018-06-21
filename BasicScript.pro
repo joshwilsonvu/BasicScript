@@ -17,11 +17,11 @@ LIBS += -L../AudioScript/ASUtils -lASUtils
 
 HEADERS += \
         basicscript.h \
-        basicscriptfactory.h
+    basicpackage.h
 
 SOURCES += \
         basicscript.cpp \
-        basicscriptfactory.cpp
+    basicpackage.cpp
 
 DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x050902    # disables all the APIs deprecated before Qt 5.9.2
